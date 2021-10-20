@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button color="basic" (click)='loadMaterials()'>Create New Material</button>
+        <button mat-button color="basic">Update Existing Material</button>
+        <button mat-button color="basic">Delete Existing Material</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<main>
+    <div *ngFor="let material of materials">
+        <li>{{ material.id}}</li>
+        <li>{{ material.name}}</li>
+        <li>{{ material.price | currency}}</li>
+    </div>
+</main>
